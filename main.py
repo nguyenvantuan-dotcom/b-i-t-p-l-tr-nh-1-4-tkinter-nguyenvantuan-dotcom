@@ -1,1 +1,16 @@
-print('Hello world!')
+from tkinter import *
+
+window = Tk()
+
+window.title("Nguyen Van A")
+window.geometry("500x500")
+
+label = Label(
+    window,
+    text="Xin chào sinh viên UHL!",
+    font=("Arial", 20)
+)
+
+label.pack()
+
+window.mainloop()
