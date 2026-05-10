@@ -1,0 +1,113 @@
+import tkinter as tk
+
+# Tạo cửa sổ chính
+root = tk.Tk()
+
+# Tiêu đề
+root.title("Quản lý Sinh viên - UHL")
+
+# Kích thước cửa sổ
+root.geometry("500x250")
+
+# Cho phép cột 1 tự co giãn
+root.columnconfigure(1, weight=1)
+
+# =========================
+# Dòng 0 - Mã sinh viên
+# =========================
+nhan_ma_sv = tk.Label(
+    root,
+    text="Mã sinh viên:"
+)
+
+nhan_ma_sv.grid(
+    row=0,
+    column=0,
+    padx=10,
+    pady=10,
+    sticky="w"
+)
+
+o_nhap_ma_sv = tk.Entry(root)
+
+o_nhap_ma_sv.grid(
+    row=0,
+    column=1,
+    padx=10,
+    pady=10,
+    sticky="ew"
+)
+
+# =========================
+# Dòng 1 - Họ tên
+# =========================
+nhan_ho_ten = tk.Label(
+    root,
+    text="Họ và tên:"
+)
+
+nhan_ho_ten.grid(
+    row=1,
+    column=0,
+    padx=10,
+    pady=10,
+    sticky="w"
+)
+
+o_nhap_ho_ten = tk.Entry(root)
+
+o_nhap_ho_ten.grid(
+    row=1,
+    column=1,
+    padx=10,
+    pady=10,
+    sticky="ew"
+)
+
+# =========================
+# Dòng 2 - Lớp
+# =========================
+nhan_lop = tk.Label(
+    root,
+    text="Lớp:"
+)
+
+nhan_lop.grid(
+    row=2,
+    column=0,
+    padx=10,
+    pady=10,
+    sticky="w"
+)
+
+o_nhap_lop = tk.Entry(root)
+
+o_nhap_lop.grid(
+    row=2,
+    column=1,
+    padx=10,
+    pady=10,
+    sticky="ew"
+)
+
+# =========================
+# Dòng 3 - Nút bấm
+# =========================
+nut_luu = tk.Button(
+    root,
+    text="Lưu thông tin",
+    bg="#0d6efd",
+    fg="white",
+    width=15
+)
+
+nut_luu.grid(
+    row=3,
+    column=1,
+    padx=10,
+    pady=20,
+    sticky="e"
+)
+
+# Chạy chương trình
+root.mainloop()
